@@ -72,7 +72,7 @@ public class SketchFile {
 
     /** Clear the isModified() result value */
     public void clearModified();
-  };
+  }
 
   /**
    * A storage for this file's text. This can be set by a GUI, so we can
@@ -242,6 +242,7 @@ public class SketchFile {
     return false;
   }
 
+  @Override
   public boolean equals(Object o) {
     return (o instanceof SketchFile) && file.equals(((SketchFile) o).file);
   }

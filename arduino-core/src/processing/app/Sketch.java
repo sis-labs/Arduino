@@ -27,7 +27,7 @@ public class Sketch {
    */
   private File folder;
 
-  private List<SketchFile> files = new ArrayList<SketchFile>();
+  private List<SketchFile> files = new ArrayList<>();
 
   private File buildPath;
 
@@ -250,7 +250,7 @@ public class Sketch {
     // If the folder is actually renamed (as opposed to moved somewhere
     // else), check for conflicts using the new filename, but the
     // existing folder name.
-    if(newFolder.getName() != folder.getName())
+    if (!newFolder.getName().equals(folder.getName()))
       checkNewFilename(new File(folder, newPrimary));
 
     return new File(newFolder, newPrimary);
